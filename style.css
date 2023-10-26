@@ -1,0 +1,169 @@
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.center_bar {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .center_bar {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+/* 默认情况下，图片宽度 */
+.img-thumbnail {
+    width: 100%;
+    max-width: 100%; /* 这一行确保图片不会超出其容器的宽度 */
+}
+
+/* 当屏幕尺寸小于600px时 */
+@media screen and (max-width: 600px) {
+    /* 图片宽度为屏幕宽度的50%，并且居中 */
+    .img-thumbnail {
+        width: 50%;
+        margin: 0 auto; /* 这一行使图片在其容器中居中 */
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.service-list li::before {
+    content: "\25CF"; /* Unicode character for solid circle */
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+footer {
+    color: white;
+}
+
+nav, footer {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+section {
+    padding-top: 2em;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+table tr {
+    display: flex;
+    padding-top: 10px;
+}
+
+table tr td:first-child {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center; /*img vertically aligned*/
+}
+
+table tr td:nth-child(2) {
+    flex: 1;
+    padding-left: 10px;
+}
+
+/*!* set img width to whole td width *!*/
+table tr td img {
+    width: 100%;
+    max-width: 100%; /* no overflow */
+}
+
+/* when screen width is less than 600px */
+@media screen and (max-width: 600px) {
+    /* vertically stack td */
+    table tr {
+        display: block;
+    }
+    table tr td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr td img {
+        width: 60%;
+        margin: 0 auto; /* set img center */
+    }
+}
+
+.icon-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.icon-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-button img {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 0.2em;
+}
+
+@media screen and (max-width: 600px) {
+    .button-group {
+        justify-content: center;
+    }
+}
+
+.publication-links {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.publication-links a{
+    margin-right: 10px;
+}
